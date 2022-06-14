@@ -2,7 +2,7 @@
 This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was a quick and dirty hack from his ColecoVision emulator Cologne. Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility.
 
 ### Enhancement
-In 2022 I (patters) branched the code to hack in automatic selection of the ROM mapper type. I remember begging for this feature on the PocketHeaven forums back in 2006, and I seem to recall that FluBBa answered something along the lines of *"it's open source, so you can add that if you really want"*. Well now I did :)
+In 2022 I (patters) branched the code to hack in automatic selection of the game ROM mapper type. I remember begging for this feature on the PocketHeaven forums back in 2006, and I seem to recall that FluBBa answered something along the lines of *"it's open source, so you can add that if you really want"*. Well now I did :)
 
 My new Python 3 builder must be used for this feature. In fact it is the builder which detects the appropriate mapper to use and records this choice in a spare byte in the ROM header for retrieval by the emulator. I ported the [algorithm which several other MSX emulators use](https://github.com/openMSX/openMSX/blob/d4c561dd02877825d63a39a28b70bcc760b503e4/src/memory/RomFactory.cc#L72). In the emulator I stole the upper 3 bits of the ```emuflags``` word passed by *main.c* to *cart.s*, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. AFAIK this should still work ok (max value is now 8191).
 
