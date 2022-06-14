@@ -27,7 +27,7 @@ My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-bu
 
 ## How to use:
 **You must supply a BIOS to be able to run games!**
-Run *msxadvance_compile.py* to add roms to the emulator. Use the BIOS tick box to add a BIOS.
+Run *msxadvance_compile.py* to add roms to the emulator.
 
 A freely available BIOS can be found at http://cbios.sourceforge.net/ (version 0.21 works, newer ones not so much).
 
