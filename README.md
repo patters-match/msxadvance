@@ -4,7 +4,7 @@ This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [We
 ### Enhancement
 MSXAdvance is a solid emulator which runs very well on GBA. Many of the very best shoot 'em ups in gaming got a start on this system: Nemesis, Nemesis II, Nemesis III, Salamander, Zanac A.I., Twin Bee, Parodius, and R-Type. The SCC sound chip was also very advanced for an 8 bit micro, so these titles remain very playable today.
 
-However, MSXAdvance is let down by one significant usability issue - you have to manually select the memory mapper for each game, and you need to remember which one they use, which means a lot of fiddling about in menus and testing. Not anymore though!
+However, MSXAdvance was always let down by one significant usability issue - you had to manually select the memory mapper for each game, and you needed to remember which one they use, which meant a lot of fiddling about in menus and testing. Not anymore though!
 
 In June 2022 I (patters) forked the sourcecode to hack in automatic selection of the game ROM mapper type. I remember begging for this feature on the PocketHeaven forums back in 2006, and I seem to recall that FluBBa (having moved onto his next project) answered with something like *"it's open source, so you can add that if you really want"*. [Well now I did](https://github.com/patters-syno/msxadvance/releases/tag/v0.2e) :)
 
@@ -27,7 +27,7 @@ My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-bu
 
 ## How to use:
 **You must supply a BIOS to be able to run games!**
-Run MSXAdvance.exe to add roms to the emulator. Use the BIOS tick box to add a BIOS.
+Run *MSXAdvance.exe* to add roms to the emulator. Use the BIOS tick box to add a BIOS.
 
 A freely available BIOS can be found at http://cbios.sourceforge.net/ (version 0.21 works, newer ones not so much).
 
