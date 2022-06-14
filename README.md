@@ -2,7 +2,9 @@
 This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was a quick and dirty hack from his ColecoVision emulator Cologne. Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility.
 
 ### Enhancement
-MSXAdvance is a solid emulator which runs very well on GBA. Many of the very best shoot 'em ups in gaming got a start on this system: Nemesis, Nemesis II, Nemesis III, Salamander, Zanac A.I., Twin Bee, Parodius, and R-Type. The SCC sound chip was also very advanced for an 8 bit micro, so these titles remain very playable today. However, MSXAdvance is let down by one significant usability issue - you have to manually select the memory mapper for each game, and you need to remember which one they use, which means a lot of fiddling about in menus and testing. Not anymore though!
+MSXAdvance is a solid emulator which runs very well on GBA. Many of the very best shoot 'em ups in gaming got a start on this system: Nemesis, Nemesis II, Nemesis III, Salamander, Zanac A.I., Twin Bee, Parodius, and R-Type. The SCC sound chip was also very advanced for an 8 bit micro, so these titles remain very playable today.
+
+However, MSXAdvance is let down by one significant usability issue - you have to manually select the memory mapper for each game, and you need to remember which one they use, which means a lot of fiddling about in menus and testing. Not anymore though!
 
 In June 2022 I (patters) forked the sourcecode to hack in automatic selection of the game ROM mapper type. I remember begging for this feature on the PocketHeaven forums back in 2006, and I seem to recall that FluBBa (having moved onto his next project) answered with something like *"it's open source, so you can add that if you really want"*. [Well now I did](https://github.com/patters-syno/msxadvance/releases/tag/v0.2e) :)
 
