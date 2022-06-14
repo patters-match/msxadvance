@@ -1,19 +1,22 @@
 MSXAdvance revision history
 -=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+v0.2e - 2022-06-14 (patters)
+   Added automatic selection of the game ROM mapper type. Python 3 builder required (included).
 
 V0.2 - 2006-04-30 (FluBBa)
-	Added a virtual keyboard.
-	Added better keymapping.
-	Added SCC sound emulation.
-	Added 32kB RAM instead of 16kB.
-	Fixed Multiboot transfer.
-	Fixed blending when used as plugin.
-	Better update timing in PAL mode.
-	Better game mapper detection.
+   Added a virtual keyboard.
+   Added better keymapping.
+   Added SCC sound emulation.
+   Added 32kB RAM instead of 16kB.
+   Fixed Multiboot transfer.
+   Fixed blending when used as plugin.
+   Better update timing in PAL mode.
+   Better game mapper detection.
 
 V0.1 - 2006-03-30 (FluBBa)
-	Initial release.
+   Initial release.
 
 V0.0 - 2006-03-07 (FluBBa)
-	Started Coding.
+   Started Coding.
+

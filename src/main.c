@@ -284,7 +284,7 @@ int drawmenu(int sel) {
 		if(roms>1)drawtext(i,(char*)(p+32),i==(sel-toprow)?1:0);
 		if(i==sel-toprow) {
 			ri=(romheader*)p;
-			romflags=(*ri).flags|(*ri).spritefollow<<16;
+			romflags=(*ri).flags|((*ri).spritefollow & 0x1FFF)<<16|((*ri).mapper & 0x7)<<29; //mapper only needs the top 3 bits
 		}
 		p+=*(u32*)(p+4)+sizeof(romheader);
 	}

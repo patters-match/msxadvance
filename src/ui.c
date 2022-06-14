@@ -324,7 +324,7 @@ void drawui1() {
 	char str[30];
 
 	cls(1);
-	drawtext(18,"     FluBBa Power 2006!",0);
+	drawtext(18,"     FluBBa Power 2022!",0);
 	if(pogoshell) i=1;
 	strmerge(str,emuname[i],"V0.2 on ");
 	strmerge(str,str,hostname[gbaversion]);

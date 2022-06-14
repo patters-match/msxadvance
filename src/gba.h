@@ -21,7 +21,9 @@ typedef struct {
 	u32 filesize;
 	u32 flags;
 	u32 spritefollow;
-	u32 reserved[4];
+	u32 bios;						//bit 1 only, located by main.c using 'textstart+16'
+	u32 mapper;						//0=undefined, 1=Konami4, 2=Konami5, 3=ASCII8k, 4=ASCII16k, 5=RTYPE
+	u32 reserved[2];
 	char name[32];
 } romheader;	
 

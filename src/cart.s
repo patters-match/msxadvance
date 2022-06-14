@@ -41,6 +41,11 @@ loadcart ;called from C:  r0=rom number, r1=emuflags
 	str r0,romnumber
 	str r1,emuflags
 
+	mov r0,r1,lsr#29		;retrieve 3bit mapper value from emuflags
+	cmp r0,#0				;maintain compatibility with the old Win32 builder which won't have set this byte
+	subne r0,r0,#1			;if set, decrement to match the mapper values expected by MapperTable
+	strneb r0,Mapper		;if set, store this single byte to Mapper
+	
 	ldr r1,=pogoshell
 	ldrb r1,[r1]
 	cmp r1,#0
