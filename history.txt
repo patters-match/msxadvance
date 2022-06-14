@@ -1,0 +1,19 @@
+MSXAdvance revision history
+-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+V0.2 - 2006-04-30 (FluBBa)
+	Added a virtual keyboard.
+	Added better keymapping.
+	Added SCC sound emulation.
+	Added 32kB RAM instead of 16kB.
+	Fixed Multiboot transfer.
+	Fixed blending when used as plugin.
+	Better update timing in PAL mode.
+	Better game mapper detection.
+
+V0.1 - 2006-03-30 (FluBBa)
+	Initial release.
+
+V0.0 - 2006-03-07 (FluBBa)
+	Started Coding.

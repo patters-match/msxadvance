@@ -1,0 +1,9 @@
+	IMPORT SCC_init
+	IMPORT SCC_reset
+	IMPORT SCC_set_mixrate
+	IMPORT SCC_set_frequency
+	IMPORT SCC_W_OFF
+	IMPORT SCC_W
+	IMPORT SCC_R
+	IMPORT SCC_Mixer
+	END
