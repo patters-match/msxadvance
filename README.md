@@ -34,8 +34,8 @@ Press L+R at any time to open the menu, A to choose, B (or L+R again) to cancel.
 ### Default in-game controls:
 	D-Pad:	Joystick.
 	A & B:	Fire buttons.
-	L:		0.
-	R:		1.
+	L:	0.
+	R:	1.
 	Start:	2.
 	Select:	3.
 	R+Start:Bring up Keyboard.
