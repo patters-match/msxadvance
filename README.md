@@ -59,16 +59,18 @@ Press L+R at any time to open the menu, A to choose, B (or L+R again) to cancel.
 
 
 ### Advanced:
-	EWRAM speed: this changes the waitstate on EWRAM between 2 and 1, this
-	  can probably damage your GBA and definitly uses more power,
-	  around 10% speedgain. Use at your own risk!
+	EWRAM speed:
+		this changes the waitstate on EWRAM between 2 and 1, this
+		can probably damage your GBA and definitly uses more power,
+		around 10% speedgain. Use at your own risk!
 
-	Link transfer:  Send a MSX game to another GBA.  The other GBA must be in
-	  multiboot receive mode (no cartridge inserted, powered on and waiting with
-	  the "GAME BOY" logo displayed). Only one game can be sent at a time, and
-	  only if it's small enough to send (approx. 128kB or less). A game can only
-	  be sent to 1 (one) Gameboy at a time, disconnect all other gameboys during
-	  transfer. Use an original Nintendo cable!
+	Link transfer:
+		Send a MSX game to another GBA.  The other GBA must be in
+		multiboot receive mode (no cartridge inserted, powered on and waiting with
+		the "GAME BOY" logo displayed). Only one game can be sent at a time, and
+		only if it's small enough to send (approx. 128kB or less). A game can only
+		be sent to 1 (one) Gameboy at a time, disconnect all other gameboys during
+		transfer. Use an original Nintendo cable!
 
 ### Pogoshell:
 Add an empty file and a BIOS. Copy *msx.gba* to the plugin folder then rename it to *msxadvance.mb* (or compress it to ```.mbz```) and add this line to the *pogo.cfg* file:
