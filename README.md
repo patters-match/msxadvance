@@ -2,7 +2,7 @@
 This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was a quick and dirty hack from his ColecoVision emulator Cologne. Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility.
 
 ### Enhancement
-MSXAdvance is a solid emulator which runs very well on GBA. Many of the very best shoot 'em ups in gaming got a start on the MSX1: Nemesis, Nemesis 2 & 3, Salamander, Zanac A.I., Twin Bee, Parodius, and R-Type - all of which run fine. The SCC sound chip was also very advanced for an 8 bit computer, so these titles remain very playable today.
+MSXAdvance is a solid emulator which runs very well on GBA. Many of the very best shoot 'em ups in gaming got a start on the MSX1: Nemesis, Nemesis 2 & 3, Salamander, Zanac A.I., Twin Bee, Parodius, and R-Type - all of which run fine here. The SCC sound chip was also very advanced for an 8 bit computer, so these titles remain very playable today.
 
 However, MSXAdvance was let down by one significant usability issue - you had to remember and manually select the memory mapper for each game, which meant fiddling about in the menu testing just to get each game started. If you weren't regularly using the GBA this extra requirement would soon be forgotten. Not anymore though!
 
