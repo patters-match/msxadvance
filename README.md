@@ -20,9 +20,9 @@ In June 2022 I (patters) forked the source code to [hack in automatic selection 
 
 My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-builders/blob/main/msxadvance_compile.py) must be used for this feature. In fact it is the builder which detects the appropriate mapper to use and records this choice in a spare byte in the ROM header for retrieval by the emulator. I implemented the [algorithm which several other MSX emulators use](https://github.com/openMSX/openMSX/blob/d4c561dd02877825d63a39a28b70bcc760b503e4/src/memory/RomFactory.cc#L72).
 
-To minimise the changes needed to the emulator ARM ASM code I repurposed the upper 3 bits of the ```emuflags``` 4 byte word passed by **main.c** to **cart.s**, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. AFAIK sprite follow should still work ok (max value is now 8191).
+To minimise the changes needed to the emulator ARM ASM code I repurposed the upper 3 bits of the ```emuflags``` 4 byte word passed by **main.c** to **cart.s**, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. The sprite follow feature will still work ok but the max value is now limited to 8191.
 
-Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility, which is why I forked v0.2.
+Although MSXAdvance v0.3 and v0.4 were released they very significantly impacted game compatibility, which is why I forked v0.2.
 
 ### Features:
 - A lot of games can actually be played.
