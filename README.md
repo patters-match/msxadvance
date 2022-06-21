@@ -16,7 +16,7 @@ However, until now MSXAdvance was let down by one significant usability issue - 
 
 ### Enhancement
 
-In June 2022 I (patters) forked the sourcecode to [hack in automatic selection of the game ROM mapper type](https://github.com/patters-syno/msxadvance/commit/f35cf8b10784fcf4239b192859dbc4336667a30b).
+In June 2022 I (patters) forked the source code to [hack in automatic selection of the game ROM mapper type](https://github.com/patters-syno/msxadvance/commit/f35cf8b10784fcf4239b192859dbc4336667a30b).
 
 My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-builders/blob/main/msxadvance_compile.py) must be used for this feature. In fact it is the builder which detects the appropriate mapper to use and records this choice in a spare byte in the ROM header for retrieval by the emulator. I implemented the [algorithm which several other MSX emulators use](https://github.com/openMSX/openMSX/blob/d4c561dd02877825d63a39a28b70bcc760b503e4/src/memory/RomFactory.cc#L72).
 
