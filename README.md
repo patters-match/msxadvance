@@ -22,7 +22,7 @@ My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-bu
 
 To minimise the changes needed to the emulator ARM ASM code I repurposed the upper 3 bits of the ```emuflags``` 4 byte word passed by **main.c** to **cart.s**, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. The sprite follow feature will still work ok but the max value is now limited to 8191.
 
-Although MSXAdvance v0.3 and v0.4 were released they very significantly impacted game compatibility, which is why I forked v0.2.
+Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility, which is why I forked v0.2.
 
 ## How to use:
 !! YOU MUST SUPPLY A BIOS TO BE ABLE TO RUN GAMES !!
