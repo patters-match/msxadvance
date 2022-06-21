@@ -1,5 +1,5 @@
 # MSXAdvance v0.2
-This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was originally a quick and dirty hack of his ColecoVision emulator Cologne since both systems have a Z80 CPU and the same VDP.
+This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was originally a quick and dirty hack of his ColecoVision emulator Cologne since both systems have a Z80 CPU and use the same VDP.
 
 Many of the very best shoot 'em ups in gaming got a start on the MSX1:
 - Nemesis, Nemesis 2, Nemesis 3
