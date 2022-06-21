@@ -10,7 +10,7 @@ Many of the very best shoot 'em up series in gaming got a start on the MSX1:
 - Fantasy Zone
 - R-Type
 
-all of which remain very playable today, and run well on MSXAdvance.
+All of which remain very playable today, and run well on MSXAdvance.
 
 However, until now MSXAdvance was let down by one significant usability issue - you had to manually select the ROM mapper for each game (hidden away in the Other Settings menu), and you also had to restart the emulator once you had changed it. Furthermore you need to remember which mapper for each game. Not anymore though!
 
