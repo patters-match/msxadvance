@@ -9,6 +9,7 @@ MSXAdvance is a solid emulator which runs very well on GBA. Many of the very bes
 - Parodius
 - Fantasy Zone
 - R-Type
+
 all of which run fine here. These titles remain very playable today.
 
 However, until now MSXAdvance was let down by one significant usability issue - you had to manually select the ROM mapper for each game (hidden away in the Other Settings menu), and you also had to restart the emulator once you had changed it. Furthermore you need to remember which mapper for each game. Not anymore though!
