@@ -1,26 +1,40 @@
 # MSXAdvance v0.2
-This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was a quick and dirty hack from his ColecoVision emulator Cologne. Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility.
+This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was originally a quick and dirty hack of his ColecoVision emulator Cologne since both systems have a Z80 CPU and the same VDP.
+
+Many of the very best shoot 'em ups in gaming got a start on the MSX1:
+- Nemesis, Nemesis 2, Nemesis 3
+- Salamander
+- Zanac A.I.
+- Twin Bee
+- Parodius
+- Fantasy Zone
+- R-Type
+
+all of which remain very playable today, and run well on MSXAdvance.
+
+However, until now MSXAdvance was let down by one significant usability issue - you had to manually select the ROM mapper for each game (hidden away in the Other Settings menu), and you also had to restart the emulator once you had changed it. Furthermore you need to remember which mapper for each game. Not anymore though!
 
 ### Enhancement
-MSXAdvance is a solid emulator which runs very well on GBA. Many of the very best shoot 'em ups in gaming got a start on the MSX1: Nemesis, Nemesis 2 & 3, Salamander, Zanac A.I., Twin Bee, Parodius, and R-Type - all of which run fine here. The SCC sound chip was also very advanced for an 8 bit computer, so these titles remain very playable today.
 
-However, MSXAdvance was let down by one significant usability issue - you had to remember and manually select the memory mapper for each game, which meant fiddling about in the menu testing just to get each game started. If you weren't regularly using the GBA this extra requirement would soon be forgotten. Not anymore though!
+In June 2022 I (patters) forked the source code to [hack in automatic selection of the game ROM mapper type](https://github.com/patters-syno/msxadvance/commit/f35cf8b10784fcf4239b192859dbc4336667a30b).
 
-In June 2022 I (patters) forked the sourcecode to [hack in automatic selection of the game ROM mapper type](https://github.com/patters-syno/msxadvance/commit/f35cf8b10784fcf4239b192859dbc4336667a30b). I remember begging for this feature on the PocketHeaven forums back in 2006, and I seem to recall that FluBBa (having moved onto his next project) answered with something like *"it's open source, so you can add that if you really want"*. Well, 16 years later and with some curiosity [I have done just that](https://github.com/patters-syno/msxadvance/releases/tag/v0.2e) :)
+My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-builders/blob/main/msxadvance_compile.py) must be used for this feature. In fact it is the builder which detects the appropriate mapper to use and records this choice in a spare byte in the ROM header for retrieval by the emulator. I implemented the [algorithm which several other MSX emulators use](https://github.com/openMSX/openMSX/blob/d4c561dd02877825d63a39a28b70bcc760b503e4/src/memory/RomFactory.cc#L72).
 
-My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-builders/blob/main/msxadvance_compile.py) must be used for this feature. In fact it is the builder which detects the appropriate mapper to use and records this choice in a spare byte in the ROM header for retrieval by the emulator. I ported the [algorithm which several other MSX emulators use](https://github.com/openMSX/openMSX/blob/d4c561dd02877825d63a39a28b70bcc760b503e4/src/memory/RomFactory.cc#L72). In the emulator I stole the upper 3 bits of the ```emuflags``` word passed by **main.c** to **cart.s**, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. AFAIK this should still work ok (max value is now 8191).
+To minimise the changes needed to the emulator ARM ASM code I repurposed the upper 3 bits of the ```emuflags``` 4 byte word passed by **main.c** to **cart.s**, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. The sprite follow feature will still work ok but the max value is now limited to 8191.
 
-#### Features:
+Although MSXAdvance v0.3 and v0.4 were released they very significantly impacted game compatibility, which is why I forked v0.2.
+
+### Features:
 - A lot of games can actually be played.
 - Automatic ROM mapper selection greatly improves the game browsing experience.
 
-#### Missing:
+### Missing:
 - Not all keys are mapped to the GBA.
 - Correct sprite collision and overflow.
 - Screen mode 3.
 - Savestates.
 
-#### Bugs:
+### Bugs:
 - Screen mode 1 is not correct.
 - The sound sucks.
 - Probably a lot more.
