@@ -24,21 +24,6 @@ To minimise the changes needed to the emulator ARM ASM code I repurposed the upp
 
 Although MSXAdvance v0.3 and v0.4 were released they very significantly impacted game compatibility, which is why I forked v0.2.
 
-### Features:
-- A lot of games can actually be played.
-- Automatic ROM mapper selection greatly improves the game browsing experience.
-
-### Missing:
-- Not all keys are mapped to the GBA.
-- Correct sprite collision and overflow.
-- Screen mode 3.
-- Savestates.
-
-### Bugs:
-- Screen mode 1 is not correct.
-- The sound sucks.
-- Probably a lot more.
-
 ## How to use:
 !! YOU MUST SUPPLY A BIOS TO BE ABLE TO RUN GAMES !!
 
