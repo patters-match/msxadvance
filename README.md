@@ -1,7 +1,7 @@
 # MSXAdvance v0.2
 This is an MSX1 emulator for the Gameboy Advance by FluBBa, rescued from the [Web Archive](https://web.archive.org/web/20150430211123/http://www.ndsretro.com/gbadown.html). It was a quick and dirty hack from his ColecoVision emulator Cologne, since both systems have a Z80 CPU and the same VDP. Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility.
 
-MSXAdvance is a solid emulator which runs very well on GBA. Many of the very best shoot 'em ups in gaming got a start on the MSX1:
+Many of the very best shoot 'em ups in gaming got a start on the MSX1:
 - Nemesis, Nemesis 2, Nemesis 3
 - Salamander
 - Zanac A.I.
@@ -10,7 +10,7 @@ MSXAdvance is a solid emulator which runs very well on GBA. Many of the very bes
 - Fantasy Zone
 - R-Type
 
-all of which run fine here. These titles remain very playable today.
+all of which remain very playable today, and run well on MSXAdvance.
 
 However, until now MSXAdvance was let down by one significant usability issue - you had to manually select the ROM mapper for each game (hidden away in the Other Settings menu), and you also had to restart the emulator once you had changed it. Furthermore you need to remember which mapper for each game. Not anymore though!
 
