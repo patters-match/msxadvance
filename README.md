@@ -10,34 +10,19 @@ Many of the very best shoot 'em up series in gaming got a start on the MSX1:
 - Fantasy Zone
 - R-Type
 
-all of which remain very playable today, and run well on MSXAdvance.
+All of which remain very playable today, and run well on MSXAdvance.
 
-However, until now MSXAdvance was let down by one significant usability issue - you had to manually select the ROM mapper for each game (hidden away in the Other Settings menu), and you also had to restart the emulator once you had changed it. Furthermore you need to remember which mapper for each game. Not anymore though!
+However, until now MSXAdvance was let down by one significant usability issue - you had to manually select the ROM mapper for each game (hidden away in the Other Settings menu), and you also had to restart the emulator once you had changed it. Furthermore you need to remember which mapper for each game.
 
 ### Enhancement
 
 In June 2022 I (patters) forked the source code to [hack in automatic selection of the game ROM mapper type](https://github.com/patters-syno/msxadvance/commit/f35cf8b10784fcf4239b192859dbc4336667a30b).
 
-My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-builders/blob/main/msxadvance_compile.py) must be used for this feature. In fact it is the builder which detects the appropriate mapper to use and records this choice in a spare byte in the ROM header for retrieval by the emulator. I implemented the [algorithm which several other MSX emulators use](https://github.com/openMSX/openMSX/blob/d4c561dd02877825d63a39a28b70bcc760b503e4/src/memory/RomFactory.cc#L72).
+My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-builders/blob/main/msxadvance_compile.py) must be used for this feature. In fact it is the builder which detects the appropriate mapper to use and records this choice in a spare byte in the ROM header for retrieval by the emulator. I implemented the same [algorithm which several other MSX emulators use](https://github.com/openMSX/openMSX/blob/d4c561dd02877825d63a39a28b70bcc760b503e4/src/memory/RomFactory.cc#L72) to scan the ROM for likely bank switch instructions and rank the observed destination addresses.
 
-To minimise the changes needed to the emulator ARM ASM code I repurposed the upper 3 bits of the ```emuflags``` 4 byte word passed by **main.c** to **cart.s**, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. The sprite follow feature will still work ok but the max value is now limited to 8191.
+To minimise the changes needed to the emulator ARM ASM code I repurposed the upper 3 bits of the ```emuflags``` 4 byte word passed by **main.c** to **cart.s**, meaning that the ```spritefollow``` half-word within is reduced from 16 bits to 13 bits wide. The rarely-used sprite follow feature will still function but the max value is now limited to 8191.
 
-Although MSXAdvance v0.3 and v0.4 were released they very significantly impacted game compatibility, which is why I forked v0.2.
-
-### Features:
-- A lot of games can actually be played.
-- Automatic ROM mapper selection greatly improves the game browsing experience.
-
-### Missing:
-- Not all keys are mapped to the GBA.
-- Correct sprite collision and overflow.
-- Screen mode 3.
-- Savestates.
-
-### Bugs:
-- Screen mode 1 is not correct.
-- The sound sucks.
-- Probably a lot more.
+Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility, which is why I forked v0.2.
 
 ## How to use:
 !! YOU MUST SUPPLY A BIOS TO BE ABLE TO RUN GAMES !!
