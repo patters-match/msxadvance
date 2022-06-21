@@ -22,17 +22,17 @@ My new [Python 3 builder](https://github.com/patters-syno/gba-emu-compilation-bu
 
 Although MSXAdvance v0.3 and v0.4 were released, they very significantly impacted game compatibility, which is why I forked v0.2.
 
-#### Features:
+### Features:
 - A lot of games can actually be played.
 - Automatic ROM mapper selection greatly improves the game browsing experience.
 
-#### Missing:
+### Missing:
 - Not all keys are mapped to the GBA.
 - Correct sprite collision and overflow.
 - Screen mode 3.
 - Savestates.
 
-#### Bugs:
+### Bugs:
 - Screen mode 1 is not correct.
 - The sound sucks.
 - Probably a lot more.
